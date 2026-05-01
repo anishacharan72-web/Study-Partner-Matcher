@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Received message bubble — Card Warm, left-aligned -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="start"
+    android:paddingVertical="4dp"
+    android:paddingHorizontal="12dp">
+
+    <TextView
+        android:id="@+id/tvMessageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bubble_received"
+        android:textColor="@color/bubble_text_received"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif"
+        android:padding="12dp"
+        android:lineSpacingMultiplier="1.3"
+        android:maxWidth="280dp" />
+</LinearLayout>

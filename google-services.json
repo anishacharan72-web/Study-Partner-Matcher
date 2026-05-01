@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "524738163740",
+    "firebase_url": "https://study-partner-matcher-default-rtdb.firebaseio.com",
+    "project_id": "study-partner-matcher",
+    "storage_bucket": "study-partner-matcher.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524738163740:android:02f3eb7e9392feaee75bd9",
+        "android_client_info": {
+          "package_name": "com.studymatcher.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524738163740-fc8kdnbpq390kikrjnsqvrrvogrobk4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv0npKdJFbOM0ejq2jhPxE4nf326FXc90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524738163740-fc8kdnbpq390kikrjnsqvrrvogrobk4p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

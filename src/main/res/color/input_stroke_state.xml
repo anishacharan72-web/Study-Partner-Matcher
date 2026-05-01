@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Warm Coral input border state list -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/warm_coral" android:state_focused="true" />
+    <item android:color="@color/error" android:state_selected="true" />
+    <item android:color="@color/border_default" />
+</selector>

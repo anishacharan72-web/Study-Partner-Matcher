@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_blush"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/deep_navy"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/surface_white"
+            app:title="Edit Profile"
+            app:titleTextColor="@color/surface_white" />
+
+        <!-- Form card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/surface_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Personal Info"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/deep_navy"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Full Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeColor="@color/border_default"
+                    app:hintTextColor="@color/text_secondary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:inputType="textPersonName"
+                        android:imeOptions="actionNext" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Institution -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilInstitution"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Institution / University"
+                    android:layout_marginTop="12dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeColor="@color/border_default"
+                    app:hintTextColor="@color/text_secondary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etInstitution"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:inputType="textCapWords"
+                        android:imeOptions="actionNext" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Bio -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Short bio (optional)"
+                    android:layout_marginTop="12dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeColor="@color/border_default"
+                    app:hintTextColor="@color/text_secondary"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="200">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etBio"
+                        android:layout_width="match_parent"
+                        android:layout_height="96dp"
+                        android:inputType="textMultiLine"
+                        android:gravity="top" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Academic Info card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/surface_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Academic Info"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/deep_navy"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Academic Level label -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Academic Level" android:textSize="13sp"
+                    android:textColor="@color/text_secondary" android:layout_marginBottom="8dp" />
+
+                <!-- Academic Level chips -->
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="true"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.chip.Chip android:id="@+id/chipHighSchool"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="High School" style="@style/Widget.MaterialComponents.Chip.Choice" />
+                    <com.google.android.material.chip.Chip android:id="@+id/chipUG"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="Undergrad" style="@style/Widget.MaterialComponents.Chip.Choice" />
+                    <com.google.android.material.chip.Chip android:id="@+id/chipPG"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="Postgrad" style="@style/Widget.MaterialComponents.Chip.Choice" />
+                    <com.google.android.material.chip.Chip android:id="@+id/chipPhD"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="PhD" style="@style/Widget.MaterialComponents.Chip.Choice" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <!-- Study Goal label -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Study Goal" android:textSize="13sp"
+                    android:textColor="@color/text_secondary" android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupGoal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="true"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.chip.Chip android:id="@+id/chipExamPrep"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="Exam Prep" style="@style/Widget.MaterialComponents.Chip.Choice" />
+                    <com.google.android.material.chip.Chip android:id="@+id/chipAssignments"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="Assignments" style="@style/Widget.MaterialComponents.Chip.Choice" />
+                    <com.google.android.material.chip.Chip android:id="@+id/chipGroupStudy"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="Group Study" style="@style/Widget.MaterialComponents.Chip.Choice" />
+                    <com.google.android.material.chip.Chip android:id="@+id/chipResearch"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="Research" style="@style/Widget.MaterialComponents.Chip.Choice" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <!-- Mode Preference label -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Preferred Mode" android:textSize="13sp"
+                    android:textColor="@color/text_secondary" android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="true">
+
+                    <com.google.android.material.chip.Chip android:id="@+id/chipOnline"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="Online" style="@style/Widget.MaterialComponents.Chip.Choice" />
+                    <com.google.android.material.chip.Chip android:id="@+id/chipInPerson"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="In-Person" style="@style/Widget.MaterialComponents.Chip.Choice" />
+                    <com.google.android.material.chip.Chip android:id="@+id/chipBoth"
+                        android:layout_width="wrap_content" android:layout_height="36dp"
+                        android:text="Both" style="@style/Widget.MaterialComponents.Chip.Choice" />
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Save button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Save Profile"
+            android:backgroundTint="@color/warm_coral"
+            android:textColor="@color/surface_white"
+            app:cornerRadius="26dp" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="32dp"
+            app:indicatorColor="@color/warm_coral"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
